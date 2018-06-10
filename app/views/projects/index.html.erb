@@ -4,5 +4,5 @@
 	<p><%= pr.title %></p>
 	<p><%= pr.subtitle %></p>
 	<p><%= pr.body %></p>
-	<p><%= image_tag pr.thumb_image %></p>
+	<p><%= image_tag pr.thumb_image unless pr.thumb_image.nil? %></p>
 <% end %>
