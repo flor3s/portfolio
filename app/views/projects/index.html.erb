@@ -1,0 +1,8 @@
+<h1>Projects</h1>
+
+<% @projects.each do |pr| %>
+	<p><%= pr.title %></p>
+	<p><%= pr.subtitle %></p>
+	<p><%= pr.body %></p>
+	<p><%= image_tag pr.thumb_image %></p>
+<% end %>
