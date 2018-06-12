@@ -8,4 +8,5 @@
 	<p><%= pr.body %></p>
 	<p><%= image_tag pr.thumb_image unless pr.thumb_image.nil? %></p>
 	<%= link_to "Edit", edit_project_path(pr) %>
+  <%= link_to 'Remove Project', project_path(pr), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
