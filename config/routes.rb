@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  resources :projects
+  resources :projects, except: [:show]
   
+  get 'project/:id', to: 'projects#show', as: 'project_show'
   get 'about', to: 'pages#about'
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
   
   resources :blogs
 
   root to: 'pages#home'
-=end
+end
