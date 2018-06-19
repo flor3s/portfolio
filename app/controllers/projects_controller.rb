@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
 		@projects = Project.all
 	end
 
+  def rails
+    @rails_projects = Project.ruby_on_rails_projects
+  end
+
 	def new
 		@project = Project.new
 	end

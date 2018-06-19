@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :projects, except: [:show]
-  
+  get 'rails-projects', to: 'projects#rails'
   get 'project/:id', to: 'projects#show', as: 'project_show'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
