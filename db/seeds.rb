@@ -45,3 +45,9 @@ end
 		thumb_image: "http://via.placeholder.com/350x200"
 	)
 end
+
+3.times do |t|
+	Project.last.technologies.create!(
+		name: "Technology #{t}"
+	)
+end
