@@ -3,11 +3,4 @@
 
 <%= link_to "Add Project", new_project_path %>
 
-<% @projects.each do |pr| %>
-	<p><%= link_to pr.title, project_show_path(pr) %></p>
-	<p><%= pr.subtitle %></p>
-	<p><%= pr.body %></p>
-	<p><%= image_tag pr.thumb_image unless pr.thumb_image.nil? %></p>
-	<%= link_to "Edit", edit_project_path(pr) %>
-  <%= link_to 'Remove Project', project_path(pr), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+<%= render @projects %>
