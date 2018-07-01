@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:edit, :update, :show, :destroy]
   layout 'project'
 
 	def index
@@ -27,12 +28,9 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-  	@project = Project.find(params[:id])
   end
 
   def update
-   	@project = Project.find(params[:id])
-
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to projects_path, notice: 'Project updated.' }
@@ -43,12 +41,9 @@ class ProjectsController < ApplicationController
   end
 
   def show
-  	@project = Project.find(params[:id])
   end
 
-  def destroy
-  	@project = Project.find(params[:id])
-  	
+  def destroy  	
   	@project.destroy
 
   	respond_to do |format|
@@ -64,5 +59,9 @@ class ProjectsController < ApplicationController
                                       :body,
                                       technologies_attributes: [:name]
                                       )
+    end
+
+    def set_project
+      @project = Project.find(params[:id])
     end
 end
