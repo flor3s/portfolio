@@ -28,4 +28,8 @@ module ApplicationHelper
 			content_tag(:p, greeting, class: "source-greeting")
 		end
 	end
+
+	def copyright_generator
+		FloresViewTool::Renderer.copyright 'Daniel Flores', 'All rights reserved'
+	end
 end

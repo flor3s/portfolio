@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/flor3s/flores_view_tool
+  revision: d05595b155159da0b848fd7db15c25964175bff1
+  specs:
+    flores_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,6 +205,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.3)
+  flores_view_tool!
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
