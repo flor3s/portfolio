@@ -1,6 +1,6 @@
 <% provide(:title, "Projects") %>
 <h1>Projects</h1>
 
-<%= link_to "Add Project", new_project_path %>
+<%= link_to "Add Project", new_project_path if logged_in?(:site_admin) %>
 
 <%= render @projects %>

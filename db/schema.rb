@@ -57,6 +57,14 @@ ActiveRecord::Schema.define(version: 2018_07_03_000234) do
     t.text "badge"
   end
 
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
+    t.bigint "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_technologies_on_project_id"
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -83,4 +91,5 @@ ActiveRecord::Schema.define(version: 2018_07_03_000234) do
   end
 
   add_foreign_key "blogs", "topics"
+  add_foreign_key "technologies", "projects"
 end
