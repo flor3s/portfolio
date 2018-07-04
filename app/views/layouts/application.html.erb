@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,18 +12,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_nav" %>
 
-    <%= render "shared/nav", location: "top" %>
+      <%= login_helper %>
 
-    <%= login_helper %>
+      <%= yield %>
 
-    <%= yield %>
+      <%= copyright_generator %>
 
-    <%= copyright_generator %>
-
-    <%= source_helper %>
+      <%= source_helper %>
+    </div>
   </body>
 </html>
