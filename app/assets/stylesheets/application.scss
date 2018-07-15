@@ -120,12 +120,12 @@ body {
  */
 
  .card-body {
-   color: black;
-   text-align: left;
+    color: black;
+    text-align: left;
  }
 
  .auth-links a {
-  color: black;
+    color: black;
  }
 
  .register {
@@ -134,4 +134,10 @@ body {
 
  .register a {
     font-size: .8em;
+ }
+
+ .login > .card {
+    width: 22rem;
+    margin: 0 auto;
+    float: none;
  }
