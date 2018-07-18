@@ -1,11 +1,9 @@
 <div class="container">
   <header class="blog-header py-3">
     <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 pt-1">
-        <a class="text-muted" href="#">Subscribe</a>
-      </div>
+      <div class="col-4 pt-1"></div>
       <div class="col-4 text-center">
-        <a class="blog-header-logo text-dark" href="#">Blog</a>
+        <a class="blog-header-logo text-dark" href="#">My Blog</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="text-muted" href="#">
@@ -17,11 +15,12 @@
     </div>
   </header>
 
-<div class="nav-scroller py-1 mb-2">
-  <nav class="nav d-flex justify-content-between">
-    <%= link_to "Home", root_path, class: "p-2 text-muted" %>
-		<%= link_to "About", about_path, class: "p-2 text-muted" %>
-		<%= link_to "Contact", contact_path, class: "p-2 text-muted" %>
-		<%= link_to "Projects", projects_path, class: "p-2 text-muted" %>
-  </nav>
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <%= link_to "Home", root_path, class: "p-2 text-muted" %>
+  		<%= link_to "About", about_path, class: "p-2 text-muted" %>
+  		<%= link_to "Contact", contact_path, class: "p-2 text-muted" %>
+  		<%= link_to "Projects", projects_path, class: "p-2 text-muted" %>
+    </nav>
+  </div>
 </div>
