@@ -11,6 +11,8 @@
     <meta name="keywords" content="<%= seo_keywords %>" />
 
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -18,7 +20,6 @@
 
     <%= render 'shared/blog_nav' %>
 
-<!-- start of container and row -->
     <main role="main" class="container">
       
       <div class="row">
@@ -27,19 +28,10 @@
 
         <%= render 'shared/blog_sidebar'%>
       </div>
-    
     </main>
 
-<!-- end of container and row -->
 
-<!-- start of footer -->
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
-<!-- end of footer -->
+    <%= render 'shared/blog_footer' %>
 
         <%= source_helper %>
 
