@@ -1,8 +1,13 @@
 <% provide(:title, "Blogs") %>
 
 <div class="col-md-8 blog-main">
-    <%= link_to 'Create a New Blog', new_blog_path if logged_in?(:site_admin) %>
+   <%= link_to 'Create a New Blog', new_blog_path if logged_in?(:site_admin) %>
 
-    <%= render @blogs %>
+   <%= paginate @blogs %>
+
+
+   <%= render @blogs %>
+
+   <%= paginate @blogs %>
 
 </div>
