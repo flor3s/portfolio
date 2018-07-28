@@ -1,6 +1,12 @@
-<% provide(:title, "Projects") %>
-<h1>Projects</h1>
+			<%= link_to "Add Project", new_project_path if logged_in?(:site_admin) %>
 
-<%= link_to "Add Project", new_project_path if logged_in?(:site_admin) %>
+<div class="album py-5 bg-light">
+  <div class="container">
 
-<%= render @projects %>
+    <div class="row">
+    	<% provide(:title, "Projects") %>
+
+			<%= render @projects %>
+		</div>
+	</div>
+</div>
