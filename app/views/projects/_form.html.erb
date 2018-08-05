@@ -1,29 +1,40 @@
 <%= form_for(@project) do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
 
-  <div class="field"> 
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
+      <div class="field"> 
+        <%= f.label :subtitle %>
+        <%= f.text_field :subtitle, class: "form-control" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-  </div>
+    <div class="col-md-6">
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body, class: "form-control", rows: 10 %>
+      </div>
+    </div>
 
-  <ul>
-    <%= f.fields_for :technologies do |tf| %>
-      <li>
-        <%= tf.label :name %>
-        <%= tf.text_field :name %>
-      </li>
-    <% end %>
-  </ul>
+    <hr>
+    <div class="col-md-12">
+      <h4>Technologies Used</h4>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div>
+        <%= f.fields_for :technologies do |tf| %>
+          <div class="form-group">
+            <%= tf.label :name %>
+            <%= tf.text_field :name, class: "form-control" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'Save Project', class: "btn btn-primary btn-block" %>
+      </div>
+    </div>
   </div>
 <% end %>
