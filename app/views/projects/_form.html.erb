@@ -1,7 +1,7 @@
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <% @project.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "Daniel Flores Portfolio", sticky: false) %>
+      <%= alert_generator error %>
     <% end %>
   <% end %>
 
@@ -10,12 +10,12 @@
       <div class="field">
         <%= f.label :title %>
         <%= f.text_field :title, class: "form-control" %>
-      </div>
+      </div><br>
 
       <div class="field"> 
         <%= f.label :subtitle %>
         <%= f.text_field :subtitle, class: "form-control" %>
-      </div>
+      </div><br>
 
       <div class="field"> 
         <label class="btn btn-primary">
