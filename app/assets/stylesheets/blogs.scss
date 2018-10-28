@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
  * Footer
  */
 .blog-footer {
+  margin-top: 20px;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -144,5 +145,24 @@ h1, h2, h3, h4, h5, h6 {
  }
 
  .social-media-icons li {
-  font-size: 2.0em
+  font-size: 2.0em;
+ }
+
+ .comment-card > .card {
+  margin-top: 15px;
+  padding: 0.5rem;
+ }
+
+ .comment-content {
+   margin-left:10px;
+ }
+
+ .comment-atribs {
+   font-size: .8em;
+   font-style: italic;
+   margin-left: 10px;
+ }
+
+ .comment-name {
+   font-weight: 700;
  }
