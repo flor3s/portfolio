@@ -30,5 +30,9 @@ module Portfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+<<<<<<< HEAD
+=======
+    config.eager_load_paths << "#{Rails.root}/lib"
+>>>>>>> 2d4466888f7f6e190e9711ca3b9f19f147dfea1d
   end
 end
