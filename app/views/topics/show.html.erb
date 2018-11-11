@@ -1,12 +1,11 @@
-<% provide(:title, "Blogs") %>
+<% provide(:title, "Blog Topics") %>
 
 <div class="col-md-8 blog-main">
-   <%= link_to 'Create a New Blog', new_blog_path if logged_in?(:site_admin) %>
+  <h2>Blogs Tagged as "<%= @topic.title %>"</h2>
 
    <%= paginate @blogs %>
 
    <%= render @blogs %>
 
    <%= paginate @blogs %>
-
 </div>

@@ -4,7 +4,7 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
   paginates_per 5
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   belongs_to :topic
   has_many :comments, dependent: :destroy
