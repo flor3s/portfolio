@@ -13,7 +13,7 @@ class Blog < ApplicationRecord
     order("updated_at DESC")
   end
 
-  def self.published
+  def self.published_only
     where("status = 1")
   end
 end

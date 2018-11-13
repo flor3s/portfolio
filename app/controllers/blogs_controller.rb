@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:edit, :update, :destroy, :toggle_status]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_sidebar_topics, except: [:update, :create, :destroy, :toggle_status]
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
@@ -10,15 +10,19 @@ class BlogsController < ApplicationController
     if logged_in?(:site_admin)
       @blogs = Blog.recent.page(params[:page])
     else
-      @blogs = Blog.published.recent.page(params[:page])
+      @blogs = Blog.published_only.recent.page(params[:page])
     end
   end
 
   # GET /blogs/
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+    else
+      redirect_to blogs_path, notice: "Page not found."
+    end
   end
 
   # GET /blogs/new
