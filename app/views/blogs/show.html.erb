@@ -4,7 +4,7 @@
 	<h2><%= @blog.title %> </h2>
 
 	<p>
-	  <%= @blog.body %>
+	  <%= markdown @blog.body %>
     <br>
     <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
     <%= " / " if logged_in?(:site_admin) %>
