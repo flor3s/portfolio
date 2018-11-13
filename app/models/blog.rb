@@ -12,4 +12,8 @@ class Blog < ApplicationRecord
   def self.recent
     order("updated_at DESC")
   end
+
+  def self.published
+    where("status = 1")
+  end
 end

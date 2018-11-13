@@ -8,9 +8,9 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     if logged_in?(:site_admin)
-      @blogs = Blog.recent.page params[:page]
+      @blogs = Blog.recent.page(params[:page])
     else
-      @blogs = Blog.where("status = 1").recent.page params[:page]
+      @blogs = Blog.published.recent.page(params[:page])
     end
   end
 
