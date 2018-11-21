@@ -17,12 +17,13 @@
     <%= render 'shared/project_nav' %>
     <%= render 'shared/project_masthead' unless logged_in?(:site_admin) %>
 
+    <%= source_helper %>
+
     <%= yield %>
 
     <%= render 'shared/project_footer' %>
 
     <%= alerts %>
 
-    <%= source_helper %>
   </body>
 </html>
