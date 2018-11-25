@@ -46,7 +46,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  width: 45em;
 }
 
 
@@ -59,6 +59,7 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 .mx-auto {
@@ -76,7 +77,7 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .7);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
   margin: 0rem .5rem 0rem .5rem;
@@ -84,7 +85,7 @@ body {
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
+  border-bottom-color: rgba(255, 255, 255, .5);
 }
 
 .nav-masthead .active {
@@ -178,4 +179,23 @@ body {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95); 
+}
+
+.app-card-container a{
+  color: blue;
+}
+
+.profile-img {
+  border-radius: 150px;
 }
