@@ -8,6 +8,8 @@
     <%= csp_meta_tag %>
     <meta name="keywords" content="<%= seo_keywords %>" />
 
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
+
     <%= stylesheet_link_tag    'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,12 +19,13 @@
     <%= render 'shared/project_nav' %>
     <%= render 'shared/project_masthead' unless logged_in?(:site_admin) %>
 
+    <%= source_helper %>
+
     <%= yield %>
 
     <%= render 'shared/project_footer' %>
 
     <%= alerts %>
 
-    <%= source_helper %>
   </body>
 </html>

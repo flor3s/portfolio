@@ -1,0 +1,9 @@
+<% if logged_in?(:site_admin) %>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb blogcrumb">
+      <li class="ml-auto"><%= link_to '<i class="far fa-file-alt"></i>'.html_safe, toggle_status_blog_path(blog), style: blog_status_color(blog) %></li>
+      <li><%= link_to '<i class="fas fa-edit"></i>'.html_safe, edit_blog_path(blog) %></li>
+      <li><%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this post?'} if logged_in?(:site_admin) %></li>
+    </ol>
+  </nav>
+<% end %>

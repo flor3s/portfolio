@@ -23,8 +23,8 @@ module ApplicationHelper
 
 	def source_helper
 		if session[:source]
-			greeting = "Thanks for visiting from #{session[:source]}"
-			content_tag(:p, greeting, class: "source-greeting")
+			greeting = "Thanks for visiting from #{session[:source]}!"
+			content_tag(:p, greeting, class: "alert alert-info" )
 		end
 	end
 
