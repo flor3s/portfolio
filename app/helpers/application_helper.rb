@@ -50,10 +50,10 @@ module ApplicationHelper
         url: blogs_path,
         title: "Blog"
       },
-      {
-        url: projects_path,
-        title: "Projects"
-      }
+      # {
+      #   url: projects_path,
+      #   title: "Projects"
+      # }
     ]
   end
 
